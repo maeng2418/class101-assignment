@@ -1,4 +1,17 @@
 .header {
-  color: red;
-  background: lightgray;
+  width: 100%;
+  background: #fff;
+  border-bottom: solid 1px #e8e8e8;
+  box-shadow: 0 0 30px #f3f1f1;
+  position: sticky;
+  top: 0;
+}
+
+.headerContents {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: 5rem;
+  margin: auto;
+  align-items: center;
 }

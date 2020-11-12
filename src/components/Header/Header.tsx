@@ -7,12 +7,14 @@ import { Link } from 'react-router-dom';
 export const Header: React.FC = () => {
   return (
     <div className={styles.header}>
-      <Link to="/">
-        <Logo />
-      </Link>
-      <Link to="/cart">
-        <CartMenu />
-      </Link>
+      <div className={styles.headerContents}>
+        <Link to="/">
+          <Logo />
+        </Link>
+        <Link to="/cart">
+          <CartMenu />
+        </Link>
+      </div>
     </div>
   );
 };
