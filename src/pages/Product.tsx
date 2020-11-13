@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { Products } from '../components';
+import { ProductList, PageTitle } from '../components';
 
 const Product: React.FC = () => {
   return (
     <div className={styles.page}>
-      <Products />
+      <PageTitle>오픈 클래스</PageTitle>
+      <ProductList />
     </div>
   );
 };

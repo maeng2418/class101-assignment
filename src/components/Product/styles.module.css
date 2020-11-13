@@ -1,5 +1,6 @@
 .product {
-  width: 276px;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
@@ -42,7 +43,8 @@
 
 .coverImage {
   width: 100%;
-  object-fit: contain;
+  height: 207px;
+  object-fit: cover;
   border-radius: 0.3rem;
 }
 
@@ -54,6 +56,7 @@
   margin: 0.4rem auto;
   padding: 0 0.3rem;
   line-height: 20px;
+  height: 3rem;
 }
 
 .score {
