@@ -1,0 +1,85 @@
+.product {
+  width: 276px;
+  display: flex;
+  flex-direction: column;
+}
+
+.productImgContainer {
+  position: relative;
+}
+
+.couponBadge {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #f5222d;
+  padding: 0.5rem 0.4rem;
+  border-radius: 2px;
+}
+
+.cartBadge {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: black;
+  opacity: 0.2;
+  padding: 0.3rem 0.4rem 0.4rem;
+  border-radius: 50%;
+}
+
+.selected {
+  background-color: #f5222d;
+  opacity: 1;
+}
+
+.coverImage {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0.3rem;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: normal;
+  letter-spacing: -0.15px;
+  color: rgb(27, 28, 29);
+  margin: 0.4rem auto;
+  padding: 0 0.3rem;
+  line-height: 20px;
+}
+
+.score {
+  margin: 2rem auto 1rem auto;
+  color: #afafaf;
+  font-size: 0.8rem;
+  padding: 0 0.3rem 0.5rem;
+  border-bottom: 1px solid #efefef;
+}
+
+.score::before {
+  content: '♥ ';
+}
+
+.price::before {
+  content: '₩ ';
+}
+
+.price {
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: rgb(27, 28, 29);
+  font-weight: bold;
+  padding: 0 0.3rem;
+}
+
+.price::after {
+  content: ' 원';
+}
