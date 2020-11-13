@@ -1,0 +1,29 @@
+.productList {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 3rem 1rem;
+  margin: 1rem auto;
+}
+
+/* 데스크탑, 노트북 */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .productList {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* 태블릿 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .productList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 휴대폰 */
+@media (min-width: 320px) and (max-width: 767px) {
+  .productList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
