@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
 import { AiOutlineShopping } from 'react-icons/ai';
+import { IProductType } from '../../interfaces';
 
-interface IPropsType {
-  id: string;
-  title: string;
-  coverImage: string;
-  price: number;
-  score: number;
-  availableCoupon?: boolean;
-}
-
-export const Product: React.FC<IPropsType> = ({
+export const Product: React.FC<IProductType> = ({
   id,
   title,
   coverImage,

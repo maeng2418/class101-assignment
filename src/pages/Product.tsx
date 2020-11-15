@@ -1,12 +1,19 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { ProductList, PageTitle } from '../components';
+import { ProductSection } from '../components';
 
 const Product: React.FC = () => {
   return (
     <div className={styles.page}>
-      <PageTitle>오픈 클래스</PageTitle>
-      <ProductList />
+      <ProductSection
+        title={'오픈클래스'}
+        url={'/data/productItems.json'}
+        start={0}
+        end={5}
+        count={5}
+        order={'DESC'}
+        orderKey={'score'}
+      />
     </div>
   );
 };

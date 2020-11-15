@@ -4,7 +4,7 @@
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   gap: 3rem 1rem;
-  margin: 1rem auto;
+  margin: 1rem 2rem;
 }
 
 /* 데스크탑, 노트북 */

@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 import Product from '../Product';
+import { IProductListType } from '../../interfaces';
 
-export const ProductList: React.FC = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch('/data/productItems.json')
-      .then((res) => res.json())
-      .then((res) => setProducts(res.productItems));
-  }, []);
-
+export const ProductList: React.FC<IProductListType> = ({ products }) => {
   return (
     <div className={styles.productList}>
       {products.map(({ id, title, coverImage, price, score, availableCoupon }) => (

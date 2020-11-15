@@ -6,3 +6,5 @@ export { default as CartMenu } from './CartMenu';
 export { default as Product } from './Product';
 export { default as ProductList } from './ProductList';
 export { default as PageTitle } from './PageTitle';
+export { default as PageNavigation } from './PageNavigation';
+export { default as ProductSection } from './ProductSection';
