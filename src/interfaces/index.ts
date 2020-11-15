@@ -23,3 +23,20 @@ export interface IPageType {
 export interface IProductSectionType extends IPageType {
   title: string;
 }
+
+export interface IStateType {
+  cart: Array<IProductType | undefined>;
+}
+
+export interface IActiontype {
+  type: string;
+  id?: string;
+  item?: IProductType;
+}
+
+export type ContextType = [IStateType | undefined, React.Dispatch<IActiontype> | undefined];
+
+export interface IProviderType {
+  reducer: (state: IStateType, action: IActiontype) => IStateType;
+  initialState: IStateType;
+}
