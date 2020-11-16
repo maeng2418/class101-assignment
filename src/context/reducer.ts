@@ -1,4 +1,4 @@
-import { IStateType, IActiontype } from '../interfaces';
+import { IStateType, IActiontype, IProductType } from '../interfaces';
 
 export const initialState = {
   cart: [],
@@ -13,7 +13,7 @@ export const reducer = (state: IStateType, action: IActiontype): IStateType => {
       };
     case 'REMOVE_FROM_CART':
       // 제일 처음에 나오는 인덱스 반환
-      const index = state.cart.findIndex((cartItem) => cartItem?.id === action.id);
+      const index = state.cart.findIndex((cartItem: IProductType) => cartItem.id === action.id);
       const newCart = [...state.cart];
       if (index >= 0) {
         newCart.splice(index, 1); // 해당 인덱스 빼내기 -> arr에 해당 인덱스에 해당하는 값이 하나 빠진다.
