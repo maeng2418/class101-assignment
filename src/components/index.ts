@@ -8,3 +8,4 @@ export { default as ProductList } from './ProductList';
 export { default as PageTitle } from './PageTitle';
 export { default as PageNavigation } from './PageNavigation';
 export { default as ProductSection } from './ProductSection';
+export { default as CartProduct } from './CartProduct';
