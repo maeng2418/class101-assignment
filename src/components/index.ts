@@ -13,3 +13,4 @@ export { default as CartListHeader } from './CartListHeader';
 export { default as CartList } from './CartList';
 export { default as CartSelectBtn } from './CartSelectBtn';
 export { default as CouponSelect } from './CouponSelect';
+export { default as TotalPrice } from './TotalPrice';

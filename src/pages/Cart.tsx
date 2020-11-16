@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { Section, CartList, CouponSelect } from '../components';
+import { Section, CartList, CouponSelect, TotalPrice } from '../components';
 
 const Product: React.FC = () => {
   return (
@@ -10,6 +10,9 @@ const Product: React.FC = () => {
       </Section>
       <Section title={'쿠폰'}>
         <CouponSelect url={'/data/coupons.json'} />
+      </Section>
+      <Section title={'결제금액'}>
+        <TotalPrice />
       </Section>
     </div>
   );
