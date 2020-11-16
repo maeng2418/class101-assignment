@@ -3,7 +3,7 @@
   border-bottom: 2px solid #cfcfcf;
 }
 
-.checkbox {
+.checkbox, .couponBox, .priceBox, .deleteBox {
   text-align: center;
 }
 
@@ -19,11 +19,12 @@
 }
 
 .couponBadge {
+  display: inline-block;
   font-size: 0.7rem;
   font-weight: 500;
   color: #fff;
   background-color: #f5222d;
-  padding: 0.5rem 0.4rem;
+  padding: 0.5rem 1rem;
   border-radius: 2px;
 }
 
