@@ -25,7 +25,7 @@ export interface IProductSectionType extends IPageType {
 }
 
 export interface IStateType {
-  cart: Array<IProductType | undefined>;
+  [key: string]: any;
 }
 
 export interface IActiontype {
@@ -34,7 +34,7 @@ export interface IActiontype {
   item?: IProductType;
 }
 
-export type ContextType = [IStateType | undefined, React.Dispatch<IActiontype> | undefined];
+export type ContextType = [IStateType, React.Dispatch<IActiontype>];
 
 export interface IProviderType {
   reducer: (state: IStateType, action: IActiontype) => IStateType;

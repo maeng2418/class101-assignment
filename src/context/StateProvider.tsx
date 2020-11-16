@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import { IProviderType, ContextType } from '../interfaces';
 
-export const StateContext = createContext<ContextType>([undefined, undefined]);
+export const StateContext = createContext<ContextType>([{}, () => {}]);
 
 const StateProvider: React.FC<IProviderType> = ({ reducer, initialState, children }) => {
   return (
