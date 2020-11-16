@@ -50,3 +50,7 @@ export interface ICartSelectBtn {
   onCheck: (checked: boolean) => void;
   onDelete: () => void;
 }
+
+export interface ICouponSelect {
+  url: string;
+}
