@@ -1,16 +1,18 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { IProductType } from '../../interfaces';
+import { ICartProductType } from '../../interfaces';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { useStateValue } from '../../context';
 
-export const CartProduct: React.FC<IProductType> = ({
+export const CartProduct: React.FC<ICartProductType> = ({
   id,
   title,
   coverImage,
   price,
   score,
   availableCoupon,
+  onCheck,
+  checked,
 }) => {
   const [state, dispatch] = useStateValue();
 
@@ -24,7 +26,12 @@ export const CartProduct: React.FC<IProductType> = ({
   return (
     <tr className={styles.cartProduct} id={id}>
       <td className={`${styles.checkbox} ${styles.box}`}>
-        <input className={styles.cartCheckbox} type={'checkbox'} checked />
+        <input
+          className={styles.cartCheckbox}
+          type={'checkbox'}
+          checked={checked}
+          onChange={(e) => onCheck(e.target.checked, id)}
+        />
       </td>
       <td className={`${styles.imgBox} ${styles.box}`}>
         <img className={styles.productImg} src={coverImage} />

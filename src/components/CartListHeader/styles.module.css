@@ -1,0 +1,10 @@
+.cartListHeader {
+  background-color: #f4f4f4;
+  color: #333;
+  border-top: 2px solid #222;
+}
+
+.cartListHeader tr th {
+  border: none;
+  padding: 1rem;
+}

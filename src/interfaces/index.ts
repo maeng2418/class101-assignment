@@ -7,6 +7,11 @@ export interface IProductType {
   availableCoupon?: boolean;
 }
 
+export interface ICartProductType extends IProductType {
+  onCheck: (checked: boolean, id: string) => void;
+  checked: boolean;
+}
+
 export interface IProductListType {
   products: Array<IProductType>;
 }
@@ -20,7 +25,7 @@ export interface IPageType {
   orderKey: string;
 }
 
-export interface IProductSectionType extends IPageType {
+export interface ISectionType {
   title: string;
 }
 
@@ -39,4 +44,9 @@ export type ContextType = [IStateType, React.Dispatch<IActiontype>];
 export interface IProviderType {
   reducer: (state: IStateType, action: IActiontype) => IStateType;
   initialState: IStateType;
+}
+
+export interface ICartSelectBtn {
+  onCheck: (checked: boolean) => void;
+  onDelete: () => void;
 }

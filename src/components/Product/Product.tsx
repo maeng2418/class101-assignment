@@ -21,17 +21,21 @@ export const Product: React.FC<IProductType> = ({
   }, [cart]);
 
   const addToCartHandler = () => {
-    dispatch({
-      type: 'ADD_TO_CART',
-      item: {
-        id,
-        title,
-        coverImage,
-        price,
-        score,
-        availableCoupon,
-      },
-    });
+    if (cart.length < 3) {
+      dispatch({
+        type: 'ADD_TO_CART',
+        item: {
+          id,
+          title,
+          coverImage,
+          price,
+          score,
+          availableCoupon,
+        },
+      });
+    } else {
+      alert('장바구니에는 최대 3개까지 담을 수 있습니다.');
+    }
   };
 
   const removeFromCartHandler = () => {
