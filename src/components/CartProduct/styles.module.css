@@ -1,0 +1,72 @@
+.box {
+  padding: 1rem;
+  border-bottom: 2px solid #cfcfcf;
+}
+
+.checkbox {
+  text-align: center;
+}
+
+.imgBox {
+  position: relative;
+  width: 10rem;
+}
+
+.productImg {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0.3rem;
+}
+
+.couponBadge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #f5222d;
+  padding: 0.5rem 0.4rem;
+  border-radius: 2px;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minus,
+.count,
+.plus {
+  background-color: #fff;
+  border: 1px solid #afafaf;
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-align: center;
+  line-height: 2.2;
+}
+
+.count {
+  border-left: none;
+  border-right: none;
+  font-weight: 600;
+}
+
+.price::after {
+  content: ' 원';
+}
+
+.delete {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #f5222d;
+  background-color: #fff;
+  padding: 0.5rem 0.4rem;
+  border-radius: 2px;
+  border: 2px solid #f5222d;
+  padding: 0.4rem 1rem;
+  box-sizing: border-box;
+  outline: none;
+}
