@@ -12,3 +12,4 @@ export { default as CartProduct } from './CartProduct';
 export { default as CartListHeader } from './CartListHeader';
 export { default as CartList } from './CartList';
 export { default as CartSelectBtn } from './CartSelectBtn';
+export { default as CouponSelect } from './CouponSelect';
