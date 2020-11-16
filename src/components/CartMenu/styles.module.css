@@ -1,4 +1,24 @@
 .cartMenu {
-  font-size: 2rem;
+  position: relative;
+  font-size: 2.2rem;
   color: black;
+}
+
+.cartCount {
+  font-size: 1rem;
+  position: absolute;
+  top: -0.5rem;
+  right: -10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5222d;
+  box-sizing: border-box;
+  line-height: 1.2;
+  color: #fff;
+  font-weight: 800;
 }
