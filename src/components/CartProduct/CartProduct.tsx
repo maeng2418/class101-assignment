@@ -51,7 +51,17 @@ export const CartProduct: React.FC<ICartProductType> = ({
           className={styles.cartCheckbox}
           type={'checkbox'}
           checked={checked}
-          onChange={(e) => onCheck(e.target.checked, id)}
+          onChange={(e) =>
+            onCheck(e.target.checked, {
+              id,
+              title,
+              coverImage,
+              price,
+              score,
+              availableCoupon,
+              count,
+            })
+          }
         />
       </td>
       <td className={`${styles.imgBox} ${styles.box}`}>

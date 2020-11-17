@@ -6,6 +6,7 @@
 
 .prev,
 .next {
+  cursor: pointer;
   font-size: 3rem;
   opacity: 0.5;
 }

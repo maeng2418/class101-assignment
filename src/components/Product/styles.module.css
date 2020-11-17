@@ -22,6 +22,7 @@
 }
 
 .cartBadge {
+  cursor: pointer;
   position: absolute;
   bottom: 12px;
   right: 10px;

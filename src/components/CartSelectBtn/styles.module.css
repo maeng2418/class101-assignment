@@ -1,5 +1,6 @@
 .cartSelectBtn {
   margin: 2rem auto;
+  width: 80%;
 }
 
 .checkbox,
@@ -11,7 +12,8 @@
 }
 
 .delete {
+  cursor: pointer;
   border: 1px solid #8c8c8c;
   background: #fff;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
 }

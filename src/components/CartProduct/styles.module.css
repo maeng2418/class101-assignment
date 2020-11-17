@@ -3,7 +3,10 @@
   border-bottom: 2px solid #cfcfcf;
 }
 
-.checkbox, .couponBox, .priceBox, .deleteBox {
+.checkbox,
+.couponBox,
+.priceBox,
+.deleteBox {
   text-align: center;
 }
 
@@ -35,6 +38,11 @@
 }
 
 .minus,
+.plus {
+  cursor: pointer;
+}
+
+.minus,
 .count,
 .plus {
   background-color: #fff;
@@ -60,6 +68,7 @@
 }
 
 .delete {
+  cursor: pointer;
   font-size: 0.7rem;
   font-weight: 800;
   color: #f5222d;

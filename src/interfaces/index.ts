@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react';
+
 export interface IProductType {
   id: string;
   title: string;
@@ -9,7 +11,7 @@ export interface IProductType {
 }
 
 export interface ICartProductType extends IProductType {
-  onCheck: (checked: boolean, id: string) => void;
+  onCheck: (checked: boolean, product: IProductType) => void;
   checked: boolean;
 }
 
@@ -55,4 +57,15 @@ export interface ICartSelectBtn {
 
 export interface ICouponSelect {
   url: string;
+  setCoupon: Dispatch<SetStateAction<string>>;
+}
+
+export interface ICartListType {
+  onCheck: (checked: boolean, product: IProductType) => void;
+  checkProducts: Array<IProductType>;
+}
+
+export interface ITotalPriceType {
+  products: Array<IProductType>;
+  coupon: string;
 }
