@@ -9,7 +9,7 @@ export interface IProductType {
 }
 
 export interface ICartProductType extends IProductType {
-  onCheck: (checked: boolean, id: string) => void;
+  onCheck: (checked: boolean, product: IProductType) => void;
   checked: boolean;
 }
 
@@ -55,4 +55,9 @@ export interface ICartSelectBtn {
 
 export interface ICouponSelect {
   url: string;
+}
+
+export interface ICartListType {
+  onCheck: (checked: boolean, product: IProductType) => void;
+  checkProducts: Array<IProductType>;
 }
