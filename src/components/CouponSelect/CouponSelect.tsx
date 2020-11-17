@@ -13,9 +13,7 @@ export const CouponSelect: React.FC<ICouponSelect> = ({ url }) => {
   return (
     <div className={styles.couponSelectBox}>
       <select className={styles.couponSelect}>
-        <option value="" selected disabled hidden>
-          쿠폰을 선택해주세요.
-        </option>
+        <option hidden>쿠폰을 선택해주세요.</option>
         {coupons.map(({ type, title }, idx) => (
           <option key={idx} value={type}>
             {title}
