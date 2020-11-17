@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { ICartProductType } from '../../interfaces';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { FiMinus, FiPlus } from 'react-icons/fi';
 import { useStateValue } from '../../context';
 
 export const CartProduct: React.FC<ICartProductType> = ({
@@ -66,17 +66,11 @@ export const CartProduct: React.FC<ICartProductType> = ({
       <td className={`${styles.countBox} ${styles.box}`}>
         <div className={styles.counter}>
           <button className={styles.minus} onClick={countDownHandler}>
-            <AiOutlineMinus />
+            <FiMinus />
           </button>
-          <input
-            className={styles.count}
-            type={'text'}
-            readOnly
-            defaultValue={count}
-            value={count}
-          />
+          <input className={styles.count} type={'text'} readOnly value={count} />
           <button className={styles.plus} onClick={countUpHandler}>
-            <AiOutlinePlus />
+            <FiPlus />
           </button>
         </div>
       </td>
