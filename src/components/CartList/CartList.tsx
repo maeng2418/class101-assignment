@@ -45,19 +45,22 @@ export const CartList: React.FC = () => {
       <table className={styles.cartTable}>
         <CartListHeader />
         <tbody>
-          {cart.map(({ id, title, coverImage, price, score, availableCoupon }: IProductType) => (
-            <CartProduct
-              key={id}
-              id={id}
-              title={title}
-              coverImage={coverImage}
-              price={price}
-              score={score}
-              availableCoupon={availableCoupon}
-              onCheck={checkHandler}
-              checked={checkProducts.some((productId) => productId === id)}
-            />
-          ))}
+          {cart.map(
+            ({ id, title, coverImage, price, score, availableCoupon, count }: IProductType) => (
+              <CartProduct
+                key={id}
+                id={id}
+                title={title}
+                coverImage={coverImage}
+                price={price}
+                score={score}
+                availableCoupon={availableCoupon}
+                count={count}
+                onCheck={checkHandler}
+                checked={checkProducts.some((productId) => productId === id)}
+              />
+            )
+          )}
         </tbody>
       </table>
       <CartSelectBtn onCheck={checkAllHandler} onDelete={removeFromCheckHandler} />

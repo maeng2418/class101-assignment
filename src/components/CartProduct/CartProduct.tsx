@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { ICartProductType } from '../../interfaces';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { FiMinus, FiPlus } from 'react-icons/fi';
 import { useStateValue } from '../../context';
 
 export const CartProduct: React.FC<ICartProductType> = ({
@@ -11,16 +11,37 @@ export const CartProduct: React.FC<ICartProductType> = ({
   price,
   score,
   availableCoupon,
+  count,
   onCheck,
   checked,
 }) => {
-  const [state, dispatch] = useStateValue();
+  const [{ cart }, dispatch] = useStateValue();
 
   const removeFromCartHandler = () => {
     dispatch({
       type: 'REMOVE_FROM_CART',
       id: id,
     });
+  };
+
+  const countUpHandler = () => {
+    dispatch({
+      type: 'COUNT_UP_FROM_CART',
+      id: id,
+      count: count,
+    });
+  };
+
+  const countDownHandler = () => {
+    if (count > 1) {
+      dispatch({
+        type: 'COUNT_DOWN_FROM_CART',
+        id: id,
+        count: count,
+      });
+    } else {
+      alert('최소 1개의 수량은 포함되어야 합니다.');
+    }
   };
 
   return (
@@ -44,17 +65,17 @@ export const CartProduct: React.FC<ICartProductType> = ({
       </td>
       <td className={`${styles.countBox} ${styles.box}`}>
         <div className={styles.counter}>
-          <button className={styles.minus}>
-            <AiOutlineMinus />
+          <button className={styles.minus} onClick={countDownHandler}>
+            <FiMinus />
           </button>
-          <input className={styles.count} type={'text'} readOnly defaultValue={1} />
-          <button className={styles.plus}>
-            <AiOutlinePlus />
+          <input className={styles.count} type={'text'} readOnly value={count} />
+          <button className={styles.plus} onClick={countUpHandler}>
+            <FiPlus />
           </button>
         </div>
       </td>
       <td className={`${styles.priceBox} ${styles.box}`}>
-        <div className={styles.price}>{price.toLocaleString()}</div>
+        <div className={styles.price}>{(price * count).toLocaleString()}</div>
       </td>
       <td className={`${styles.deleteBox} ${styles.box}`}>
         <button className={styles.delete} onClick={removeFromCartHandler}>

@@ -11,6 +11,7 @@ export const Product: React.FC<IProductType> = ({
   price,
   score,
   availableCoupon = true,
+  count = 1,
 }) => {
   const [pick, setPick] = useState(false);
   const [{ cart }, dispatch] = useStateValue();
@@ -31,6 +32,7 @@ export const Product: React.FC<IProductType> = ({
           price,
           score,
           availableCoupon,
+          count,
         },
       });
     } else {

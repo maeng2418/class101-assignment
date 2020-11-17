@@ -5,6 +5,7 @@ export interface IProductType {
   price: number;
   score: number;
   availableCoupon?: boolean;
+  count: number;
 }
 
 export interface ICartProductType extends IProductType {
@@ -37,6 +38,7 @@ export interface IActiontype {
   type: string;
   id?: string;
   item?: IProductType;
+  count?: number;
 }
 
 export type ContextType = [IStateType, React.Dispatch<IActiontype>];

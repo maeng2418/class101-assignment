@@ -6,7 +6,7 @@ import { IProductListType } from '../../interfaces';
 export const ProductList: React.FC<IProductListType> = ({ products }) => {
   return (
     <div className={styles.productList}>
-      {products.map(({ id, title, coverImage, price, score, availableCoupon }) => (
+      {products.map(({ id, title, coverImage, price, score, availableCoupon, count }) => (
         <Product
           key={id}
           id={id}
@@ -15,6 +15,7 @@ export const ProductList: React.FC<IProductListType> = ({ products }) => {
           price={price}
           score={score}
           availableCoupon={availableCoupon}
+          count={count}
         />
       ))}
     </div>

@@ -8,3 +8,7 @@
   border: none;
   padding: 1rem;
 }
+
+.price {
+  min-width: 8rem;
+}
