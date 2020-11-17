@@ -53,6 +53,7 @@ export interface IProviderType {
 export interface ICartSelectBtn {
   onCheck: (checked: boolean) => void;
   onDelete: () => void;
+  checkProducts: Array<IProductType>;
 }
 
 export interface ICouponSelect {

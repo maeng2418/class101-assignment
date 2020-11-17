@@ -10,7 +10,7 @@ import { IProductType } from '../../interfaces';
 
 export const CartSection: React.FC = () => {
   const [{ cart }, dispatch] = useStateValue();
-  const [checkProducts, setCheckProducts] = useState<Array<IProductType>>([]);
+  const [checkProducts, setCheckProducts] = useState<Array<IProductType>>([...cart]);
   const [coupon, setCoupon] = useState('');
 
   // 개별 선택
@@ -47,7 +47,11 @@ export const CartSection: React.FC = () => {
     <div className={styles.CartSectino}>
       <Section title={'장바구니'}>
         <CartList onCheck={checkHandler} checkProducts={checkProducts} />
-        <CartSelectBtn onCheck={checkAllHandler} onDelete={removeFromCheckHandler} />
+        <CartSelectBtn
+          onCheck={checkAllHandler}
+          onDelete={removeFromCheckHandler}
+          checkProducts={checkProducts}
+        />
       </Section>
       <Section title={'쿠폰'}>
         <CouponSelect url={'/data/coupons.json'} setCoupon={setCoupon} />
