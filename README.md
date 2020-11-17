@@ -2,6 +2,16 @@
 > - 쇼핑몰의 상품 목록 페이지 구현
 > - 장바구니 기능 구현
 
+## 배포 링크
+https://mystifying-edison-fbf69d.netlify.app/
+
+## 시연 영상
+<img src="https://user-images.githubusercontent.com/46251629/99386062-3b3f7a80-2915-11eb-8b42-78052ab5289f.gif" width="600px"/>
+
+## 포트번호 변경시 주의사항
+- 윈도우 환경에서는 package.json에서 script부분의 start에 "set PORT=3001 && react-scripts start"로 변경합니다.
+- 리눅스 환경에서는 package.json에서 script부분의 start에 "export PORT=3001 && react-scripts start"로 변경합니다.
+
 ## 조건
 
 - **React 혹은 React Native로 개발합니다**
